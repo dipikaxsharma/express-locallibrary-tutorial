@@ -7,10 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog');
-
+const dotenv = require('dotenv');
 
 var app = express();
-
+dotenv.config({ path: '.env' })
 //Set up mongoose connection
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://dipikaxsharma:<password>@cluster0-y7bom.mongodb.net/test?retryWrites=true&w=majorityur_database_url_here';
